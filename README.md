@@ -40,11 +40,14 @@ To run the project locally, follow these steps:
 5. Create the database and run migrations:
 
   ```bash
-  docker container exec blog_app_1 rails db:create
-  docker container exec blog_app_1 rails db:migrate
+  docker container exec rails_blog_61-app-1 db:create
+  docker container exec rails_blog_61-app-1 db:migrate
   ```
-
-6. Open your browser and visit `http://localhost:3000` to see the application.
+6. Install Webpacker.
+  ```bash
+  docker container exec rails_blog_61-app-1 webpacker:install
+  ```
+7. Open your browser and visit `http://localhost:3000` to see the application.
 
 ## Running Tests
 
